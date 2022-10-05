@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Google Fonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Favicons Link -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./Assets/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./Assets/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./Assets/favicon-16x16.png"
+    />
+    <link rel="manifest" href="./Assets/site.webmanifest" />
+
+    <!-- icons link -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./Style.css" />
+    <script defer src="./Script.js"></script>
+    <title>Cash Register</title>
+  </head>
+  <body>
+    <header class="header">
+      <nav>
+        <h2>Cash Register</h2>
+      </nav>
+    </header>
+    <main class="main-container">
+      <section class="container heading">
+        <div>
+          <h3>How Does it works?</h3>
+          <button class="btn-reset">Reset</button>
+        </div>
+        <p>Enter the bill amount and the cash paid by your customer.</p>
+        <p>
+          We will tell you the amount and the minimum number of notes to be
+          returned to your customer.
+        </p>
+        <p>Available currencies: Rs. 1, 5, 10, 20, 100, 500, 2000.</p>
+      </section>
+      <section class="container">
+        <div class="transaction bill">
+          <label for="bill">Enter the bill amount</label>
+          <input
+            type="number"
+            class="bill-input"
+            name="bill"
+            min="0"
+            placeholder="Enter here"
+          />
+
+          <button class="btn-bill">Next</button>
+        </div>
+        <div class="transaction cash">
+          <label for="cash">Enter the cash given</label>
+          <input
+            type="number"
+            name="cash"
+            class="cash-input"
+            min="0"
+            placeholder="Enter here"
+          />
+          <button class="btn-calculate">Calculate</button>
+        </div>
+        <div class="error"></div>
+      </section>
+      <section class="container notes-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Notes</th>
+              <th>No. of Notes</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>2000</td>
+              <td class="noteOutput"></td>
+            </tr>
+            <tr>
+              <td>500</td>
+              <td class="noteOutput"></td>
+            </tr>
+            <tr>
+              <td>100</td>
+              <td class="noteOutput"></td>
+            </tr>
+            <tr>
+              <td>20</td>
+              <td class="noteOutput"></td>
+            </tr>
+            <tr>
+              <td>10</td>
+              <td class="noteOutput"></td>
+            </tr>
+            <tr>
+              <td>5</td>
+              <td class="noteOutput"></td>
+            </tr>
+            <tr>
+              <td>2</td>
+              <td class="noteOutput"></td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td class="noteOutput"></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+    <footer class="footer">
+      <ul class="link-list-item">
+        <li class="link-list">
+          <a
+            class="link"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=ashokpatel574@gmail.com"
+            target="_blank"
+            ><i class="bx bxl-gmail"></i
+          ></a>
+        </li>
+        <li class="link-list">
+          <a
+            class="link"
+            href="https://www.linkedin.com/in/ashokpatel574/"
+            target="_blank"
+            ><i class="bx bxl-linkedin-square"></i
+          ></a>
+        </li>
+        <li class="link-list">
+          <a
+            class="link"
+            href="https://github.com/ashokpatel574"
+            target="_blank"
+            ><i class="bx bxl-github"></i
+          ></a>
+        </li>
+        <li class="link-list">
+          <a
+            class="link"
+            href="https://twitter.com/ashokpatel574"
+            target="_blank"
+            ><i class="bx bxl-twitter"></i
+          ></a>
+        </li>
+      </ul>
+      <p class="footer-text">@Ashok Patel</p>
+    </footer>
+  </body>
+</html>

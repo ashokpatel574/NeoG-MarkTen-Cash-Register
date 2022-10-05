@@ -1,0 +1,351 @@
+:root {
+  --primary-color: #209cee;
+  --secondary-color: #fff;
+  --text-color: #333;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  /* font-size: 10px; */
+  /* 10px / 16px = 0.625 = 62.5% */
+  /* Percentage of user's browser font-size setting */
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+/* General style */
+
+body {
+  font-family: "Inter", sans-serif;
+  color: var(--text-color);
+  overflow-x: hidden;
+  background-color: var(--primary-color);
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  display: inline-block;
+}
+
+button:focus {
+  outline: none;
+}
+
+label,
+input {
+  display: inline-block;
+}
+
+button {
+  display: block;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.8rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  color: var(--secondary-color);
+  background-color: var(--primary-color);
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.error {
+  color: red;
+  padding: 2rem 0 0 1rem;
+  font-size: 2rem;
+  word-wrap: break-word;
+  font-weight: 600;
+}
+
+/* Header Style Section */
+
+.header {
+  text-align: center;
+  max-width: 96rem;
+  margin: 0 auto;
+}
+
+.header h2 {
+  font-size: 4.2rem;
+  font-weight: 700;
+  padding: 3rem;
+  color: var(--secondary-color);
+  letter-spacing: 1.25px;
+  word-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.heading > div {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+/* Main container  Style Section */
+
+.main-container {
+  max-width: 96rem;
+  margin: 0 auto;
+  background-color: #fff;
+  padding: 4rem;
+  border-radius: 0.5rem;
+}
+
+.container {
+  margin-bottom: 3rem;
+}
+
+/* Main container heading style section */
+
+.heading h3 {
+  font-size: 2.4rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.heading p {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+  line-height: 2.5rem;
+  word-wrap: break-word;
+}
+
+/* Main container transaction-input style section */
+
+.transaction label {
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.transaction input {
+  font-size: 2rem;
+  padding: 1.2rem;
+  width: 40%;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 2rem;
+}
+
+.transaction input::placeholder {
+  opacity: 0.8;
+}
+
+.transaction:nth-child(2) {
+  margin-top: 2rem;
+}
+
+.cash {
+  display: none;
+}
+
+.btn-reset {
+  padding: 0.4rem 1.2rem;
+}
+
+.btn-bill,
+.btn-calculate {
+  padding: 1rem 2.4rem;
+}
+
+/* Notes Container Style Section  */
+
+.notes-container {
+  max-width: 84rem;
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  font-size: 1.8rem;
+  display: none;
+}
+
+table thead tr {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  text-align: center;
+}
+
+table {
+  width: 100%;
+  border-spacing: 0;
+}
+
+table th,
+table td {
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Footer Style Section */
+
+footer {
+  padding: 3rem 2rem;
+  text-align: center;
+  background-color: var(--primary-color);
+  margin-top: 2rem;
+}
+
+.link-list-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+
+i {
+  font-size: 3rem;
+  color: var(--secondary-color);
+  margin-bottom: 2rem;
+  transition: all 0.5s;
+}
+
+i:hover {
+  transform: scale(1.25);
+}
+
+.footer-text {
+  font-size: 1.8rem;
+  margin-top: 1rem;
+  letter-spacing: 1.5px;
+  color: var(--secondary-color);
+}
+
+/* Media Query */
+
+/* 1024px / 16px ----64em  */
+
+@media (max-width: 64em) {
+  /* Header Style Section */
+
+  .header {
+    max-width: 64rem;
+  }
+
+  /* Main container  Style Section */
+
+  .main-container {
+    max-width: 64rem;
+    padding: 4rem;
+  }
+
+  .transaction input {
+    width: 50%;
+  }
+
+  /* Notes Container Style Section  */
+
+  .notes-container {
+    max-width: 64rem;
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+/* 740px / 16px ----44em  */
+
+@media (max-width: 44em) {
+  /* Header Style Section */
+
+  .header {
+    max-width: 50rem;
+  }
+
+  /* Main container  Style Section */
+
+  .main-container {
+    max-width: 50rem;
+    padding: 2rem;
+  }
+
+  /* Notes Container Style Section  */
+
+  .notes-container {
+    max-width: 50rem;
+  }
+
+  table {
+    width: 75%;
+  }
+}
+
+/* 592px / 16px ----37em  */
+
+@media (max-width: 37em) {
+  button {
+    padding: 1rem 2rem;
+  }
+
+  .header h2 {
+    font-size: 3.2rem;
+  }
+
+  /* Main container  Style Section */
+
+  .main-container {
+    padding: 2rem;
+    border-radius: 0;
+  }
+
+  /* Main container heading style section */
+
+  .heading h3 {
+    font-size: 2rem;
+  }
+
+  .heading p {
+    font-size: 1.6rem;
+  }
+
+  /* Main container transaction-input style section */
+
+  .transaction label {
+    font-size: 2rem;
+  }
+
+  .transaction input {
+    font-size: 2rem;
+    width: 100%;
+  }
+
+  .btn-reset {
+    padding: 0.2rem 0.8rem;
+  }
+
+  /* Notes Container Style Section  */
+
+  .notes-container {
+    padding: 1rem 0;
+    font-size: 1.6rem;
+  }
+
+  table {
+    width: 100%;
+  }
+}
